@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>PILA$</title>
+  </head>
+  <body>
+    <!--_____________________________________________________________________________NAVBAR(MENU) ABAIXO______________________________________________________________________________________________________________________________-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">PILA$</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"data-toggle="modal" data-target="#modalCategoria">Categorias<span class="sr-only">(página atual)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"data-toggle="modal" data-target="#modalNovoLançamento">Novo Lançamento<span class="sr-only">(página atual)</span></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        </form>
+      </div>
+    </nav>
+ <!--_____________________________________________________________________________NAVBAR(MENU) ACIMA______________________________________________________________________________________________________________________________-->
+     
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">PILA$</h1>
+        <p class="lead">Nesta aplicação web você poderá gerenciar todos os seus pilas!</p>
+        <hr class="my-4">
+        <p>Registre aqui todos os pilas que você ganha e todos os pilas que você gasta, separe em quantas categorías quiser</p>
+      </div>
+     <!--TABELAS ABAIXO-->
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Data Hora</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Pilas</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td></td>
+            <td><button type="button" class="btn btn-primary"data-toggle="modal" data-target="#modalAlterar">Alterar</button></td>
+            <td><button type="button" class="btn btn-danger"data-toggle="modal" data-target="#modalExcluir">Excluir</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td></td>
+            <td><button type="button" class="btn btn-primary"data-toggle="modal" data-target="#modalAlterar">Alterar</button></td>
+            <td><button type="button" class="btn btn-danger"data-toggle="modal" data-target="#modalExcluir">Excluir</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td></td>
+            <td><button type="button" class="btn btn-primary"data-toggle="modal" data-target="#modalAlterar">Alterar</button></td>
+            <td><button type="button" class="btn btn-danger"data-toggle="modal" data-target="#modalExcluir">Excluir</button></td>
+          </tr>
+  
+        </tbody>
+      </table>
+      <!--TABELAS ACIMA-->
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom"> <!--fica a msg de direitos no rodape da pagina com fixed-bottom-->
+      <span>Todos os Direitos são reservados</span>
+    </nav>
+
+    <!-- modalAlterar Abaixo -->
+    <div class="modal fade" id="modalAlterar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">AlterarLançamento</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"> <!--Aqui dentro monto a tela do Modal_____________-->
+            <form>
+              <div class="form-group">
+                <label for="exampleInputDescrição">Descrição</label>
+                <input type="text" class="form-control" id="exampleInputDescrição" aria-describedby="emailHelp" placeholder="Digite a descrição do lançamento">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPilas">Pilas</label>
+                <input type="text" class="form-control" id="exampleInputPilas" placeholder="Quantos Pilas">
+              </div>
+            </form>
+          </div><!--Aqui fecha a montagem do Modal_______________________________________-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modalAlterar Acima -->
+
+    <!-- modalCategoria Abaixo -->
+    <div class="modal fade" id="modalCategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Categorias</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"> <!--Aqui dentro monto a tela do Modal_____________-->
+           
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Recebe Categoria" aria-label="Recebe Categoria" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Adicionar</button>
+              </div>
+            </div>    
+<hr>
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>Alimentação</option>
+                <option>Combustível</option>
+                <option>Educação</option>
+                <option>Entretenimento</option>
+                <option>Salário</option>
+              </select>
+            </div>
+            <div class="form-group">
+
+          </div><!--Aqui fecha a montagem do Modal_______________________________________-->
+        </div>
+      </div>
+    </div>
+    <!-- modalCategoria Acima -->
+
+        <!-- modalNovoLançamento Abaixo -->
+    <div class="modal fade" id="modalNovoLançamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Novo Lançamento</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"> <!--Aqui dentro monto a tela do Modal_____________-->
+            <h1>AQUI VAI A INTERFACE DE CATEGORIA</h1>
+          </div><!--Aqui fecha a montagem do Modal_______________________________________-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- modalNovoLançamento Acima -->
+    
+        <!-- modalExcluir Abaixo -->
+    <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Excluir</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"> <!--Aqui dentro monto a tela do Modal_____________-->
+            <h5>Deseja excluir esse lançamento agora?</h5>
+          </div><!--Aqui fecha a montagem do Modal_______________________________________-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">OK</button>
+            <button type="button" class="btn btn-light">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modalExcluir Acima -->  
+    
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
